@@ -1,0 +1,130 @@
+/* Color palette */
+
+:root {
+    --yellow: #F7DD62;
+    --red: #EF6C6C;
+    --lightblue: #4CC4DA;
+    --gray: #EEE;
+    --lightgray: #FCFCFC;
+    --darkgray: #8C979A;
+
+}
+
+body {
+    height: 100%;
+}
+
+.column {
+    background-color: var(--lightgray);
+    width: 500px;
+    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.5);
+    display: -webkit-flex;
+    -webkit-flex-direction: column;
+    height: 100%;
+}
+
+.header {
+    background-color: var(--red);
+    width: 500px;
+    height: 130px;
+    margin: 0;
+}
+
+.linkscontainter {
+    height: calc(100vh - 130px);
+    padding-top: 20px;
+    overflow: auto;
+}
+
+#office {
+    font: 22px "Exo 2";
+    margin-left: 400px;
+    font font-weight: 800;
+    background-image: url(office.png);
+    background-repeat: no-repeat;
+    text-align: center;
+    padding-top: 14px;
+    width: 80px;
+    
+    
+    
+}
+input[type=text] {
+    width: 460px;
+    border-radius: 20px;
+    border: 0px;
+    font: 12px "Roboto";
+    background-color: white;
+    background-image: url('addlink.svg');
+    background-position: 6px 6px; 
+    background-repeat: no-repeat;
+    padding: 12px 20px 12px 40px;
+    margin-left: 20px;
+    margin-top: 20px;
+}
+
+input[type=text]:hover {
+    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.25);    
+}
+
+.linkbox {
+    background-color: var(--gray);
+    height: 75px;
+    width: 460px;
+    border-radius: 45px;
+    margin-top: 12px;
+    margin-left: 20px;
+    padding-top: 15px
+}
+
+.linkbox:hover {
+    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.25);    
+}
+.linkbox:hover .trash {
+        display: block;
+}
+.linkname {
+    font: 16px "Roboto";
+    font-weight: 600;
+    margin-bottom: 4px;
+}
+
+.link {
+    font: 12px "Roboto";
+    color: var(--red);
+    font-weight: 600;
+    margin-bottom: 4px;
+    cursor: pointer;
+    text-decoration: none;
+}
+.date {
+    font: 12px "Roboto";
+    color: var(--darkgray);
+    padding-top: 2px;
+}
+.trash {
+    background-image: url(trashclosed.svg);
+    width: 18px;
+    height: 22px;
+    margin-left: 14px;
+    float: right;
+    margin-right: 16px;
+    margin-top: -3px;
+    display: none;
+}
+.trash:hover {
+    background-image: url(trash.svg);
+    display: none;
+}
+
+.placeholder {
+    background-image: url(saved.svg);
+    width: 62px;
+    height: 62px;
+    margin-left: 14px;
+    float: left;
+    background-color: white;
+    border-radius: 31px;
+    margin-right: 16px;
+}
+
