@@ -13,6 +13,10 @@ var leftheaderclickhandler = function(){
     rightcolumn = rightcolumn[0];
     rightcolumn.classList.remove("super-active");
     rightcolumn.classList.add("non-active");
+    var rightheader = document.querySelectorAll(".header")
+    rightheader = rightheader[0];
+    rightheader.classList.add("header-red");
+
     
     console.log ("Hello world")
 }
@@ -26,6 +30,10 @@ var rightheaderclickhandler = function(){
     rightcolumn = rightcolumn[0];
     rightcolumn.classList.remove("non-active");
     rightcolumn.classList.add("super-active");
+    var leftheader = document.querySelectorAll(".header")
+    leftheader = leftheader[0];
+    leftheader.classList.add("header-yellow");
+
     
     console.log ("Hello world")
 }

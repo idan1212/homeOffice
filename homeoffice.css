@@ -166,3 +166,11 @@ input[type=text]:hover {
     opacity: 0.5;
     box-shadow: none;
 }
+
+.header-red {
+        background-color: var(--red);
+}
+
+.header-yellow {
+        background-color: var(--yellow);
+}
