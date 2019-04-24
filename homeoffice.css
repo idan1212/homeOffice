@@ -12,7 +12,14 @@
 
 body {
     height: 100%;
-    background-color: var(--lightgray)
+    background-color: var(--lightgray);
+    margin: 0;
+}
+#aligntocenter {
+    position: relative;
+    width: 900px;
+    height: 100%;
+    margin: 0px auto;
 }
 
 .header {
@@ -23,57 +30,55 @@ body {
     left: 0;
     background-color: var(--yellow)
 }
-.columnheaderactive {
-    background-color: var(--red);
+.columnheader {
     width: 500px;
     height: 130px;
     margin: 0;
 }
-.columnactive {
-    left: 600;
-    background-color: var(--lightgray);
-    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.5);
+.columnheader-right {
+    background-color: var(--red);
+}
+.columnheader-left {
+    background-color: var(--yellow);
 }
 .column {
     position: absolute;
-    top: 0;
-    bottom: 0;
-    float: right;
     width: 500px;
     height: 100%;
-}
-.columnheadernotactive {
-    background-color: var(--yellow);
-    width: 500px;
-    height: 130px;
-    margin: 0;
-}
-.columnnotactive {
-    left: 200;
     background-color: var(--lightgray);
-    opacity: 0.5;
+
 }
-.columnnotactive .linkscontainter {
-    overflow: hidden;
+.column-right {
+    right: 0;
+    background-color: white;
+    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.5);
+}
+.column-left {
+    opacity: 0.5;
 }
 .linkscontainter {
     height: calc(100vh - 150px);
     padding-top: 20px;
     overflow: auto;
 }
-
-#office {
-    font: 22px "Exo 2";
-    margin-left: 400px;
-    font font-weight: 800;
-    background-repeat: no-repeat;
-    text-align: center;
-    padding-top: 14px;
-    width: 80px;
-    
-    
-    
+.column-left .linkscontainter {
+    overflow: hidden;
 }
+.titletext {
+    font: 22px "Exo 2";
+    font font-weight: 800;
+    padding-top: 14px;
+    width: 460px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+#office {
+    text-align: right;
+}
+#home {
+    text-align: left;
+}
+
 input[type=text] {
     width: 460px;
     border-radius: 20px;
