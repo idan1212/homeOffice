@@ -1,45 +1,59 @@
-var leftheader = document.querySelectorAll(".columnheadernotactive")
-var rightheader = document.querySelectorAll(".columnheaderactive")
+var leftheader = document.querySelectorAll(".column-left")
+var rightheader = document.querySelectorAll(".column-right")
+var linkscontainerleft = document.querySelector(".column-left .linkscontainter")
+var linkscontainerright = document.querySelector(".column-right .linkscontainter")
+
+
 
 leftheader = leftheader[0];
 rightheader = rightheader[0];
 
 var leftheaderclickhandler = function(){
-    var leftcolumn = document.querySelectorAll(".columnnotactive")
-    leftcolumn = leftcolumn[0];
+    var leftcolumn = document.querySelector(".column-left")
     leftcolumn.classList.remove("non-active");
     leftcolumn.classList.add("super-active");
-    var rightcolumn = document.querySelectorAll (".columnactive")
-    rightcolumn = rightcolumn[0];
+    var rightcolumn = document.querySelector(".column-right")
     rightcolumn.classList.remove("super-active");
     rightcolumn.classList.add("non-active");
-    var rightheader = document.querySelectorAll(".header")
-    rightheader = rightheader[0];
+    var rightheader = document.querySelector(".header")
     rightheader.classList.add("header-red");
+    rightheader.classList.remove("header-yellow");
 
     
+    linkscontainerleft.classList.add("scroll");
+    linkscontainerleft.classList.remove("noscroll");
+    linkscontainerright.classList.remove("scroll");
+    linkscontainerright.classList.add("noscroll");
+
     console.log ("Hello world")
 }
 
 var rightheaderclickhandler = function(){
-    var leftcolumn = document.querySelectorAll(".columnnotactive")
-    leftcolumn = leftcolumn[0];
-    leftcolumn.classList.remove("super-active");
-    leftcolumn.classList.add("non-active");
-    var rightcolumn = document.querySelectorAll (".columnactive")
-    rightcolumn = rightcolumn[0];
+    var rightcolumn = document.querySelector(".column-right")
     rightcolumn.classList.remove("non-active");
     rightcolumn.classList.add("super-active");
-    var leftheader = document.querySelectorAll(".header")
-    leftheader = leftheader[0];
+    var leftcolumn = document.querySelector(".column-left")
+    leftcolumn.classList.remove("super-active");
+    leftcolumn.classList.add("non-active");
+    var leftheader = document.querySelector(".header")
     leftheader.classList.add("header-yellow");
+    leftheader.classList.remove("header-red");
 
     
-    console.log ("Hello world")
+    linkscontainerright.classList.add("scroll");
+    linkscontainerright.classList.remove("noscroll");
+    linkscontainerleft.classList.remove("scroll");
+    linkscontainerleft.classList.add("noscroll");
+
+  
+    
+
 }
 
 leftheader.addEventListener('click', leftheaderclickhandler)
 rightheader.addEventListener('click', rightheaderclickhandler)
+
+
 
 /*
 
