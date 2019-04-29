@@ -40,7 +40,7 @@ body {
     top: 0;
     left: 0;
     background-color: var(--yellow);
-    border-top: 6px solid #EFBF25;
+    border-top: 6px solid var(--darkred);
 }
 #logo {
     position: absolute;
@@ -62,11 +62,11 @@ body {
 
 .columnheader-right {
     background-color: var(--red);
-    border-top: 6px solid #E02D2D
+    border-top: 6px solid var(--darkred);
 }
 .columnheader-left {
     background-color: var(--yellow);
-    border-top: 6px solid #EFBF25
+    border-top: 6px solid var(--darkyellow);
 }
 .column {
     position: absolute;
@@ -141,6 +141,10 @@ input[type=text]:hover {
     font: 16px "Roboto";
     font-weight: 600;
     margin-bottom: 4px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    padding-right: 20px;
 }
 
 .link {
@@ -150,6 +154,11 @@ input[type=text]:hover {
     margin-bottom: 4px;
     cursor: pointer;
     text-decoration: none;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: block;
+    padding-right: 20px;
 }
 .date {
     font: 12px "Roboto";
