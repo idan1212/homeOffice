@@ -132,6 +132,7 @@ input[type=text]:hover {
     background-image: url(assets/addlink.svg);
     cursor: pointer;
     border: 0px;
+    background-color: white;
 }
 
 .linkbox {
@@ -257,5 +258,9 @@ input[type=text]:hover {
     .linkbox {
     width: calc(100vw - 40px);
     }
+    .inputcont {
+    width: calc(100vw - 40px);
+    }
+
 
 }
