@@ -1,9 +1,11 @@
-var leftheader = document.querySelectorAll(".column-left")
-var rightheader = document.querySelectorAll(".column-right")
+var leftheader = document.querySelectorAll(".column-left")[0]
+var rightheader = document.querySelectorAll(".column-right")[0]
 var linkscontainerleft = document.querySelector(".column-left .linkscontainter")
 var linkscontainerright = document.querySelector(".column-right .linkscontainter")
 
 /*
+
+//'Linkit' button
 var whichcolumnisactiverightnow = "right";
 
 
