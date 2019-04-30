@@ -3,12 +3,25 @@ var rightheader = document.querySelectorAll(".column-right")
 var linkscontainerleft = document.querySelector(".column-left .linkscontainter")
 var linkscontainerright = document.querySelector(".column-right .linkscontainter")
 
+/*
+var whichcolumnisactiverightnow = "right";
 
+
+if (whichcolumnisactiverightnow == "right") {
+    // activate the left column
+    switchtoleftcolumn();
+whichcolumnisactiverightnow = "left";
+} else {
+    // activate the right column
+    switchtorightcolumn();
+whichcolumnisactiverightnow = "right";
+}
 
 leftheader = leftheader[0];
 rightheader = rightheader[0];
+*/
 
-var leftheaderclickhandler = function(){
+var switchtoleftcolumn = function(){
     var leftcolumn = document.querySelector(".column-left")
     leftcolumn.classList.remove("non-active");
     leftcolumn.classList.add("super-active");
@@ -28,7 +41,7 @@ var leftheaderclickhandler = function(){
     console.log ("Hello world")
 }
 
-var rightheaderclickhandler = function(){
+var switchtorightcolumn = function(){
     var rightcolumn = document.querySelector(".column-right")
     rightcolumn.classList.remove("non-active");
     rightcolumn.classList.add("super-active");
@@ -44,14 +57,10 @@ var rightheaderclickhandler = function(){
     linkscontainerright.classList.remove("noscroll");
     linkscontainerleft.classList.remove("scroll");
     linkscontainerleft.classList.add("noscroll");
-
-  
-    
-
 }
 
-leftheader.addEventListener('click', leftheaderclickhandler)
-rightheader.addEventListener('click', rightheaderclickhandler)
+leftheader.addEventListener('click', switchtoleftcolumn)
+rightheader.addEventListener('click', switchtorightcolumn)
 
 
 

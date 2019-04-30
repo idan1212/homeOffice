@@ -40,7 +40,7 @@ body {
     top: 0;
     left: 0;
     background-color: var(--yellow);
-    border-top: 6px solid var(--darkred);
+    border-top: 6px solid var(--darkyellow);
 }
 #logo {
     position: absolute;
