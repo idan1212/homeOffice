@@ -1,27 +1,14 @@
-var leftheader = document.querySelectorAll(".column-left")[0]
-var rightheader = document.querySelectorAll(".column-right")[0]
+var leftheader = document.querySelectorAll(".column-left")
+var rightheader = document.querySelectorAll(".column-right")
 var linkscontainerleft = document.querySelector(".column-left .linkscontainter")
 var linkscontainerright = document.querySelector(".column-right .linkscontainter")
-
-/*
-
-//'Linkit' button
-var whichcolumnisactiverightnow = "right";
-
-
-if (whichcolumnisactiverightnow == "right") {
-    // activate the left column
-    switchtoleftcolumn();
-whichcolumnisactiverightnow = "left";
-} else {
-    // activate the right column
-    switchtorightcolumn();
-whichcolumnisactiverightnow = "right";
-}
+var switchbutton = document.querySelector('#logo')[0]
 
 leftheader = leftheader[0];
 rightheader = rightheader[0];
-*/
+
+var whichcolumnisactiverightnow = "right";
+
 
 var switchtoleftcolumn = function(){
     var leftcolumn = document.querySelector(".column-left")
@@ -63,7 +50,22 @@ var switchtorightcolumn = function(){
 
 leftheader.addEventListener('click', switchtoleftcolumn)
 rightheader.addEventListener('click', switchtorightcolumn)
+switchbutton.addEventListener('click', switchcontainerbutton)
 
+//'Linkit' button
+
+
+var switchcontainerbutton = function () {
+if (whichcolumnisactiverightnow == "right") {
+    // activate the left column
+    switchtoleftcolumn();
+whichcolumnisactiverightnow = "left";
+} else {
+    // activate the right column
+    switchtorightcolumn();
+whichcolumnisactiverightnow = "right";
+}
+}
 
 
 /*
