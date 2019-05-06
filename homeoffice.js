@@ -2,8 +2,7 @@ var leftheader = document.querySelectorAll(".column-left")
 var rightheader = document.querySelectorAll(".column-right")
 var linkscontainerleft = document.querySelector(".column-left .linkscontainter")
 var linkscontainerright = document.querySelector(".column-right .linkscontainter")
-var switchbutton = document.querySelector('#logo')[0]
-
+var switchbutton = document.querySelector('#logo')
 leftheader = leftheader[0];
 rightheader = rightheader[0];
 
@@ -48,13 +47,6 @@ var switchtorightcolumn = function(){
     linkscontainerleft.classList.add("noscroll");
 }
 
-leftheader.addEventListener('click', switchtoleftcolumn)
-rightheader.addEventListener('click', switchtorightcolumn)
-switchbutton.addEventListener('click', switchcontainerbutton)
-
-//'Linkit' button
-
-
 var switchcontainerbutton = function () {
 if (whichcolumnisactiverightnow == "right") {
     // activate the left column
@@ -66,6 +58,15 @@ whichcolumnisactiverightnow = "left";
 whichcolumnisactiverightnow = "right";
 }
 }
+
+leftheader.addEventListener('click', switchtoleftcolumn)
+rightheader.addEventListener('click', switchtorightcolumn)
+switchbutton.addEventListener('click', switchcontainerbutton)
+
+//'Linkit' button
+
+
+
 
 
 /*
