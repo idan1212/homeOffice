@@ -8,7 +8,7 @@ rightheader = rightheader[0];
 
 var whichcolumnisactiverightnow = "right";
 
-
+// Click on right coulmn -> Switch to left column
 var switchtoleftcolumn = function(){
     var leftcolumn = document.querySelector(".column-left")
     leftcolumn.classList.remove("non-active");
@@ -29,6 +29,7 @@ var switchtoleftcolumn = function(){
     console.log ("Hello world")
 }
 
+// Click on left coulmn -> Switch to right column
 var switchtorightcolumn = function(){
     var rightcolumn = document.querySelector(".column-right")
     rightcolumn.classList.remove("non-active");
@@ -47,6 +48,7 @@ var switchtorightcolumn = function(){
     linkscontainerleft.classList.add("noscroll");
 }
 
+//'Linkit' button
 var switchcontainerbutton = function () {
 if (whichcolumnisactiverightnow == "right") {
     // activate the left column
@@ -59,11 +61,25 @@ whichcolumnisactiverightnow = "right";
 }
 }
 
+
+//Input field value -> Print to console.log
+var nameInput = Document.getElementById('linksinput');
+
+document.querySelector('form').addEventListener('submit', function (e) {
+   //prevent the normal submission of the form
+    e.preventDefault();
+
+    console.log(nameInput.value);    
+});
+
+
+
+
+
 leftheader.addEventListener('click', switchtoleftcolumn)
 rightheader.addEventListener('click', switchtorightcolumn)
 switchbutton.addEventListener('click', switchcontainerbutton)
 
-//'Linkit' button
 
 
 
