@@ -63,14 +63,15 @@ whichcolumnisactiverightnow = "right";
 
 
 //Input field value -> Print to console.log
-var nameInput = Document.getElementById('linksinput');
+var nameInput = function() {
 
 document.querySelector('form').addEventListener('submit', function (e) {
    //prevent the normal submission of the form
     e.preventDefault();
 
     console.log(nameInput.value);    
-});
+} );
+    }
 
 
 
