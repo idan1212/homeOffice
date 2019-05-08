@@ -3,6 +3,10 @@ var rightheader = document.querySelectorAll(".column-right")
 var linkscontainerleft = document.querySelector(".column-left .linkscontainter")
 var linkscontainerright = document.querySelector(".column-right .linkscontainter")
 var switchbutton = document.querySelector('#logo')
+var formLeft = document.querySelector('#form-left')
+var formRight = document.querySelector('#form-right')
+
+
 leftheader = leftheader[0];
 rightheader = rightheader[0];
 
@@ -62,18 +66,15 @@ whichcolumnisactiverightnow = "right";
 }
 
 
+
 //Input field value -> Print to console.log
-var nameInput = function() {
-
-document.querySelector('form').addEventListener('submit', function (e) {
-   //prevent the normal submission of the form
-    e.preventDefault();
-
-    console.log(nameInput.value);    
-} );
-    }
+function userInput() {
+    return document.getElementById("form-input").value;
+}
 
 
+var users = userInput();
+console.log(users);
 
 
 
