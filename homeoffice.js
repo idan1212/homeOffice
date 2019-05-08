@@ -68,16 +68,39 @@ whichcolumnisactiverightnow = "right";
 
 
 //Input field value print to console.log
-  function inputChange(e) {
-   console.log(document.getElementById("name").value);
+  function inputChangeRight(e) {
+      e.preventDefault()
+      var inputContent = document.getElementById("link-input-right").value;
+      var containerRight = document.querySelector(".super-active .linkscontainter");
+      
+      var linkBox = document.createElement('div');
+      linkBox.classList.add("linkbox");
+        var currentdateTime = new Date()
+      var dateTime = currentdateTime.getDate() + "." + (currentdateTime.getMonth()+1) + "." + currentdateTime.getFullYear() + " ♥ " + currentdateTime.getHours() + ":" + currentdateTime.getMinutes();
+      var linkBoxContent = `<div class="placeholder"></div>
+                            <div class="linkname">Do I Wanna Know</div>` + `<a class="link" href="http://isthishow.com">` + inputContent + `</a>
+                            <a class="trash" href="whatwhat.html">`+`</a>
+                            <div class="date">` + dateTime + `</div>`
+      linkBox.innerHTML = linkBoxContent;
+      
+      containerRight.appendChild (linkBox)
+
+      
+      //containerRight.textContent = inputContent//
+   console.log(inputContent);
   }
 
+  function inputChangeLeft(e) {
+      e.preventDefault()
+   console.log(document.getElementById("link-input-left").value);
+  }
 
 
 leftheader.addEventListener('click', switchtoleftcolumn)
 rightheader.addEventListener('click', switchtorightcolumn)
 switchbutton.addEventListener('click', switchcontainerbutton)
-
+formRight.addEventListener('submit', inputChangeRight)
+formLeft.addEventListener('submit', inputChangeLeft)
 
 
 
