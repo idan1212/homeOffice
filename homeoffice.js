@@ -68,13 +68,9 @@ whichcolumnisactiverightnow = "right";
 
 
 //Input field value -> Print to console.log
-function userInput() {
-    return document.getElementById("form-input").value;
-}
-
-
-var users = userInput();
-console.log(users);
+  function inputChange(e) {
+   console.log(document.getElementById("name").value);
+  }
 
 
 
