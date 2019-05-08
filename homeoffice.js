@@ -67,7 +67,7 @@ whichcolumnisactiverightnow = "right";
 
 
 
-//Input field value -> Print to console.log
+//Input field value print to console.log
   function inputChange(e) {
    console.log(document.getElementById("name").value);
   }
